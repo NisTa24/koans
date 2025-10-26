@@ -17,10 +17,11 @@ def triangle(a, b, c)
   raise TriangleError if a + b <= c
 
   values = [a, b, c]
+  uniq_size = values.uniq.size
 
-  if values.uniq.size == 1
+  if uniq_size == 1
     :equilateral
-  elsif values.uniq.size == 2
+  elsif uniq_size == 2
     :isosceles
   else
     :scalene
