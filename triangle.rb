@@ -14,9 +14,9 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  raise TriangleError if a + b <= c
+  values = [a, b, c].sort
+  raise TriangleError if values[0] + values[1] <= values[2]
 
-  values = [a, b, c]
   uniq_size = values.uniq.size
 
   if uniq_size == 1
